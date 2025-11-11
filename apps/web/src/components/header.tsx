@@ -4,6 +4,7 @@ export default function Header() {
 	const links = [
 		{ to: "/", label: "Home" },
 		{ to: "/todos", label: "Todos" },
+		{ to: "/rag", label: "Markdown RAG" },
 	] as const;
 
 	return (
