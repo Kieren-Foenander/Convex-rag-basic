@@ -33,21 +33,21 @@ export const add = action({
 });
 
 
-export const search = action({
-    args: {
-        query: v.string(),
-    },
-    handler: async (ctx, args) => {
-        const { results, text, entries, usage } = await rag.search(ctx, {
-            namespace: "global",
-            query: args.query,
-            limit: 10,
-            vectorScoreThreshold: 0.5, // Only return results with a score >= 0.5
-        });
+// export const search = action({
+//     args: {
+//         query: v.string(),
+//     },
+//     handler: async (ctx, args) => {
+//         const { results, text, entries, usage } = await rag.search(ctx, {
+//             namespace: "global",
+//             query: args.query,
+//             limit: 10,
+//             vectorScoreThreshold: 0.5, // Only return results with a score >= 0.5
+//         });
 
-        return { results, text, entries, usage };
-    },
-});
+//         return { results, text, entries, usage };
+//     },
+// });
 
 export const askQuestion = action({
     args: {
